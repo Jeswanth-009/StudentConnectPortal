@@ -7,7 +7,6 @@ python-multipart
 python-decouple
 motor
 cloudinary
-smtplib
 email-validator
 pydantic
 pydantic[email]
