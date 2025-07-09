@@ -2,15 +2,8 @@
 
 ## Quick Deploy to Vercel
 
-1. **Push to GitHub** (if not already done):
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit - Student Connect app"
-   git branch -M main
-   git remote add origin YOUR_GITHUB_REPO_URL
-   git push -u origin main
-   ```
+1. **✅ Code Pushed to GitHub**: 
+   Your code is now at: https://github.com/Jeswanth-009/StudentConnectPortal
 
 2. **Deploy on Vercel**:
    - Go to https://vercel.com

@@ -444,6 +444,9 @@ async def get_user_profile(username: str):
     user_data["posts"] = posts
     return user_data
 
+# Export app for Vercel
+handler = app
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
