@@ -12,8 +12,8 @@ from decouple import config
 import cloudinary
 import cloudinary.uploader
 import smtplib
-from email.mime.text import MimeText
-from email.mime.multipart import MimeMultipart
+import email.mime.text
+import email.mime.multipart
 from pydantic import BaseModel, EmailStr
 from bson import ObjectId
 import json
@@ -126,12 +126,12 @@ async def get_current_user(credentials: HTTPAuthorizationCredentials = Depends(s
 
 def send_email(to_email: str, subject: str, body: str):
     try:
-        msg = MimeMultipart()
+        msg = email.mime.multipart.MIMEMultipart()
         msg['From'] = EMAIL_ADDRESS
         msg['To'] = to_email
         msg['Subject'] = subject
         
-        msg.attach(MimeText(body, 'html'))
+        msg.attach(email.mime.text.MIMEText(body, 'html'))
         
         server = smtplib.SMTP(SMTP_SERVER, SMTP_PORT)
         server.starttls()
